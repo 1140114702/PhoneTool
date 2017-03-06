@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.widget.EditText;
 
 import com.phone.phonetool.R;
 import com.phone.phonetool.fragment.RecommendFragment;
@@ -28,6 +30,7 @@ public class AppSearch extends AppCompatActivity {
     private List<String> tabTitles = new ArrayList<>();
     private List<Fragment> fragments = new ArrayList<>();
     private AppSearchAdapter adapter;
+    private EditText searchEdit;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +42,8 @@ public class AppSearch extends AppCompatActivity {
     private void initView() {
         tableLayout = (TabLayout) findViewById(R.id.app_search_tab_layout);
         viewPager = (ViewPager) findViewById(R.id.app_search_view_pager);
+        searchEdit = (EditText) findViewById(R.id.app_search_edit);
+        Editable searchText = searchEdit.getText();
 
         Collections.addAll(tabTitles, titles);
         for (int i = 0; i < tabTitles.size(); i++) {

@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.AppSearch" android:theme="@style/AppTheme"/>
+        <activity android:name=".activity.AppSearch" android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"/>
     </application>
 
 </manifest>

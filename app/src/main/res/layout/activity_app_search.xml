@@ -22,6 +22,7 @@
             android:src="@mipmap/ic_launcher" />
 
         <EditText
+            android:id="@+id/app_search_edit"
             android:textSize="15sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
