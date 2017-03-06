@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.phone.phonetool.R;
@@ -49,6 +50,11 @@ public class RecommendFragment extends Fragment {
             AppSearchBean bean = new AppSearchBean();
             list.add(bean);
         }
+        ImageView imageView = new ImageView(getActivity());
+        imageView.setBackgroundResource(R.mipmap.ic_launcher);
+        ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,500);
+        imageView.setLayoutParams(layoutParams);
+        recyclerView.addHeaderView(imageView);
         recyclerView.setAdapter(new AppSearchAdapter(list));
     }
 }
