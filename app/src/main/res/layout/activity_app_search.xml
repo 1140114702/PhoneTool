@@ -6,22 +6,25 @@
     android:background="@color/white"
     android:orientation="vertical">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:padding="8dp"
         android:gravity="center_vertical">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:src="@mipmap/ic_launcher" />
 
         <EditText
+            android:textSize="15sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:background="@drawable/radius_gray"
             android:hint="请输入关键字"
@@ -30,25 +33,23 @@
             android:textColor="#333" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:src="@mipmap/ic_launcher" />
     </LinearLayout>
 
-    <View style="@style/line_horizontal" />
-
     <android.support.design.widget.TabLayout
+        android:background="@color/white"
         android:id="@+id/app_search_tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:tabIndicatorColor="@color/colorAccent"
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/colorAccent"
         app:tabTextAppearance="@style/tab_layout_text"
         app:tabTextColor="#333" />
 
-    <View style="@style/line_horizontal" />
+    </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/app_search_view_pager"
