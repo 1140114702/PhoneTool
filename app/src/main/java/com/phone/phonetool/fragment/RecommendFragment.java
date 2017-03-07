@@ -51,7 +51,7 @@ public class RecommendFragment extends Fragment {
             list.add(bean);
         }
         ImageView imageView = new ImageView(getActivity());
-        imageView.setBackgroundResource(R.mipmap.ic_launcher);
+        imageView.setBackgroundResource(R.drawable.ic_yi_loading);
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,500);
         imageView.setLayoutParams(layoutParams);
         recyclerView.addHeaderView(imageView);

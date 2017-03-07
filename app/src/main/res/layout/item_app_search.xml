@@ -19,10 +19,10 @@
 
             <ImageView
                 android:id="@+id/item_app_search_icon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="5dp"
-                android:background="@mipmap/ic_launcher" />
+                android:src="@drawable/ic_yi_loading" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -33,6 +33,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/item_app_search_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="微信红包"
@@ -48,27 +49,27 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/ic_star_solid" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/ic_star_solid" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/ic_star_solid" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/ic_star_half" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@mipmap/ic_star_hollow" />
 
                 </LinearLayout>
 
@@ -78,6 +79,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/item_app_search_mb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="33.3MB"
@@ -92,6 +94,7 @@
                         android:layout_marginRight="8dp" />
 
                     <TextView
+                        android:id="@+id/item_app_search_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="下载999万次"
@@ -103,6 +106,7 @@
             <View style="@style/line_vertical" />
 
             <LinearLayout
+                android:id="@+id/item_app_search_download"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -110,16 +114,16 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@mipmap/ic_download1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="5dp"
                     android:text="下载"
-                    android:textColor="#999"
+                    android:textColor="@color/them"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
@@ -127,12 +131,13 @@
         <View style="@style/line_horizontal"/>
 
         <TextView
+            android:id="@+id/item_app_search_content"
             android:maxLines="1"
             android:ellipsize="end"
             android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="一段说明,一段说明.一段说明。"
+            android:text="一段说明"
             android:textColor="#999"
             android:textSize="14sp" />
     </LinearLayout>

@@ -8,8 +8,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.phone.phonetool.R;
 import com.phone.phonetool.fragment.RecommendFragment;
@@ -22,7 +23,7 @@ import java.util.List;
  * Created by zyb on 2017/3/6.
  */
 
-public class AppSearch extends AppCompatActivity {
+public class AppSearch extends AppCompatActivity implements View.OnClickListener {
 
     private TabLayout tableLayout;
     private ViewPager viewPager;
@@ -31,6 +32,7 @@ public class AppSearch extends AppCompatActivity {
     private List<Fragment> fragments = new ArrayList<>();
     private AppSearchAdapter adapter;
     private EditText searchEdit;
+    private ImageView clearText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,8 +45,8 @@ public class AppSearch extends AppCompatActivity {
         tableLayout = (TabLayout) findViewById(R.id.app_search_tab_layout);
         viewPager = (ViewPager) findViewById(R.id.app_search_view_pager);
         searchEdit = (EditText) findViewById(R.id.app_search_edit);
-        Editable searchText = searchEdit.getText();
-
+        clearText = (ImageView) findViewById(R.id.app_search_clear);
+        clearText.setOnClickListener(this);
         Collections.addAll(tabTitles, titles);
         for (int i = 0; i < tabTitles.size(); i++) {
             fragments.add(new RecommendFragment());
@@ -54,6 +56,15 @@ public class AppSearch extends AppCompatActivity {
         }
         viewPager.setAdapter(adapter);
         tableLayout.setupWithViewPager(viewPager); //与ViewPager关联
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.app_search_clear:
+                searchEdit.setText("");
+                break;
+        }
     }
 
     class AppSearchAdapter extends FragmentPagerAdapter {
