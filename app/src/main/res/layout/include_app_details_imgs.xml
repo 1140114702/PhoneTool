@@ -3,13 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="267dp"
     android:background="#F5F6F7"
+    android:padding="8dp"
     android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_margin="8dp"
-        android:layout_marginLeft="8dp">
+        android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="150dp"
