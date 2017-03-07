@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/round_blue"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="官网"
+        android:textColor="@color/them"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_blue"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="安全"
+        android:textColor="@color/them"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/round_blue"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="广告"
+        android:textColor="@color/them"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_blue"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="收费"
+        android:textColor="@color/them"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"/>
+
+    <ImageView
+        android:src="@mipmap/ic_down"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+</LinearLayout>

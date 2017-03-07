@@ -8,7 +8,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="250dp"
         android:fitsSystemWindows="true">
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -43,16 +43,23 @@
         app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
 
         <LinearLayout
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="这是一个textview"
-                android:textColor="#333"
-                android:textSize="16sp" />
+            <include layout="@layout/include_app_details_tag"/>
+
+            <View
+                style="@style/line_horizontal"/>
+
+            <include layout="@layout/include_app_details_imgs"/>
+
+            <View
+                android:layout_marginBottom="8dp"
+                style="@style/line_horizontal"/>
+
+            <include layout="@layout/include_app_details_content"/>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>
