@@ -1,64 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="8dp">
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:background="@drawable/round_blue"
-        android:gravity="center"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:text="官网"
-        android:textColor="@color/them"
-        android:textSize="14sp" />
+    <LinearLayout
+        android:id="@+id/app_detail_tag_layout_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/round_blue"
-        android:gravity="center"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:text="安全"
-        android:textColor="@color/them"
-        android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/round_blue"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="官网"
+            android:textColor="@color/them"
+            android:textSize="14sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:background="@drawable/round_blue"
-        android:gravity="center"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:text="广告"
-        android:textColor="@color/them"
-        android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/round_blue"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="安全"
+            android:textColor="@color/them"
+            android:textSize="14sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/round_blue"
-        android:gravity="center"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:text="收费"
-        android:textColor="@color/them"
-        android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/round_blue"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="广告"
+            android:textColor="@color/them"
+            android:textSize="14sp" />
 
-    <View
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="1dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/round_blue"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="收费"
+            android:textColor="@color/them"
+            android:textSize="14sp" />
 
-    <ImageView
-        android:src="@mipmap/ic_down"
-        android:layout_width="30dp"
-        android:layout_height="30dp" />
-</LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/app_detail_tag_more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_down" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/app_detail_tag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_pass" />
+
+            <TextView
+                android:textColor="#55AB46"
+                style="@style/text_view_14sp_app_tag"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="官网：正版授权" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/ic_pass" />
+
+            <TextView
+                style="@style/text_view_14sp_app_tag"
+                android:layout_marginLeft="8dp"
+                android:text="捆绑：没有捆绑恶意" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_no_pass" />
+
+            <TextView
+                android:textColor="#d81e06"
+                style="@style/text_view_14sp_app_tag"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="广告：内置广告" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/ic_pass" />
+
+            <TextView
+                style="@style/text_view_14sp_app_tag"
+                android:layout_marginLeft="8dp"
+                android:text="插件：不需要" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_pass" />
+
+            <TextView
+                style="@style/text_view_14sp_app_tag"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="资费：无扣费" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/ic_pass" />
+
+            <TextView
+                style="@style/text_view_14sp_app_tag"
+                android:layout_marginLeft="8dp"
+                android:text="泄密：不存在" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_pass" />
+
+            <TextView
+                style="@style/text_view_14sp_app_tag"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="赌博：不存在" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/ic_pass" />
+
+            <TextView
+                style="@style/text_view_14sp_app_tag"
+                android:layout_marginLeft="8dp"
+                android:text="色情：不存在淫秽色情" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_pass" />
+
+            <TextView
+                style="@style/text_view_14sp_app_tag"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="安全：通过“亿动安全中心”审核" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <View style="@style/line_horizontal"/>
+    
+</android.support.design.widget.AppBarLayout>

@@ -30,4 +30,36 @@
         <item name="android:background">#cccccc</item>
     </style>
 
+    <style name="text_view_14sp_333">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#333</item>
+    </style>
+
+    <style name="text_view_14sp_666">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#666</item>
+    </style>
+
+    <style name="text_view_14sp_999">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#999</item>
+    </style>
+
+    <style name="text_view_14sp_app_tag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#55AB46</item>
+    </style>
+
+    <style name="tool_bar_layout_0sp">
+        <item name="android:textSize">0sp</item>
+    </style>
+
 </resources>

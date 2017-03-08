@@ -1,114 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
-    android:padding="8dp"
     android:orientation="vertical">
 
-    <TextView
-        android:textSize="14sp"
-        android:textColor="#333"
-        android:text="版本：3.8.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <View style="@style/line_horizontal" />
 
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:textSize="14sp"
-        android:textColor="#333"
-        android:text="版本号：738"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:textSize="14sp"
-        android:textColor="#333"
-        android:text="语言：简体"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:textSize="14sp"
-        android:textColor="#333"
-        android:text="类型：软件"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:textSize="14sp"
-        android:textColor="#333"
-        android:text="系统要求：Android 2.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:textSize="14sp"
-        android:textColor="#333"
-        android:text="更新：2016/11/7 下午4:16:18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:textSize="14sp"
-        android:textColor="#333"
-        android:text="作者：恒诚科技发展（北京）有限公司"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <View
-        android:layout_marginTop="16dp"
-        style="@style/line_horizontal"/>
-
-    <TextView
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:textSize="18sp"
-        android:textColor="#333"
-        android:text="官方介绍"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/app_detail_content"
-        android:ellipsize="end"
-        android:textSize="14sp"
-        android:textColor="#666"
-        android:text="版本：4.4.10\n版本号：162\n语言：简体\n类型：软件\n系统要求：Android 4.0.3\n更新：2016/11/1 下午3:02:49\n作者：北京小桔科技有限公司"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <RelativeLayout
-        android:id="@+id/app_detail_more"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+    <LinearLayout
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/text_view"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:textSize="14sp"
-        android:textColor="#999"
-        android:text="详细介绍"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:text="官方介绍"
+            android:textColor="#333"
+            android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/app_detail_more_img"
-            android:src="@mipmap/ic_more_down"
-            android:layout_toRightOf="@+id/text_view"
-            android:layout_centerVertical="true"
-            android:layout_width="20dp"
-            android:layout_height="20dp" />
+        <TextView
+            android:id="@+id/app_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="版本：4.4.10\n版本号：162\n语言：简体\n类型：软件\n系统要求：Android 4.0.3\n更新：2016/11/1 下午3:02:49\n作者：北京小桔科技有限公司"
+            android:textColor="#666"
+            android:textSize="14sp" />
 
-    </RelativeLayout>
-</LinearLayout>
+        <RelativeLayout
+            android:id="@+id/app_detail_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="详细介绍"
+                android:textColor="#999"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/app_detail_more_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/text_view"
+                android:src="@mipmap/ic_more_down" />
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本：3.8.3"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="版本号：738"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语言：简体"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="类型：软件"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统要求：Android 2.3"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="更新：2016/11/7 下午4:16:18"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_marginBottom="66dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="作者：恒诚科技发展（北京）有限公司"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</android.support.design.widget.AppBarLayout>
