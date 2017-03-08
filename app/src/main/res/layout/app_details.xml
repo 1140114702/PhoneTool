@@ -102,7 +102,14 @@
 
             <include layout="@layout/include_app_details_tag" />
 
-            <include layout="@layout/include_app_details_imgs" />
+            <android.support.v7.widget.RecyclerView
+                android:background="#F5F6F7"
+                android:scrollbars="none"
+                android:id="@+id/app_detail_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--<include layout="@layout/include_app_details_imgs" />-->
 
             <include layout="@layout/include_app_details_content" />
         </LinearLayout>

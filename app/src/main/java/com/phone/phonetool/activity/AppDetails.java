@@ -3,6 +3,8 @@ package com.phone.phonetool.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +15,11 @@ import android.widget.TextView;
 
 import com.phone.phonetool.BaseActivity;
 import com.phone.phonetool.R;
+import com.phone.phonetool.adapter.AppDetailsAdapter;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by zyb on 2017/3/7.
@@ -21,13 +28,13 @@ import com.phone.phonetool.R;
 public class AppDetails extends BaseActivity implements View.OnClickListener {
 
 //    private ConvenientBanner banner;
-//    private String[] imgUrls = {
-//            "http://file.market.xiaomi.com/thumbnail/jpeg/l395/AppStore/0ff33c45a8834452120ab3aa6237938e142b1f20d",
-//            "http://file.market.xiaomi.com/thumbnail/jpeg/l395/AppStore/04be22493e3b546dc1f387ba9668caf318c680043",
-//            "http://file.market.xiaomi.com/thumbnail/jpeg/l395/AppStore/03be24893b3c5c6d63f388ba9708c8f013e4146a2",
-//            "http://file.market.xiaomi.com/thumbnail/jpeg/l395/AppStore/03be24893b3c5d6d6ff387ba9808cdf011e4146a2"
-//    };
-//    private List<String> imgList = new ArrayList<>();
+    private String[] imgUrls = {
+            "http://file.market.xiaomi.com/thumbnail/jpeg/l395/AppStore/0ff33c45a8834452120ab3aa6237938e142b1f20d",
+            "http://file.market.xiaomi.com/thumbnail/jpeg/l395/AppStore/04be22493e3b546dc1f387ba9668caf318c680043",
+            "http://file.market.xiaomi.com/thumbnail/jpeg/l395/AppStore/03be24893b3c5c6d63f388ba9708c8f013e4146a2",
+            "http://file.market.xiaomi.com/thumbnail/jpeg/l395/AppStore/03be24893b3c5d6d6ff387ba9808cdf011e4146a2"
+    };
+    private List<String> imgList = new ArrayList<>();
     private RelativeLayout contentMore;
     private TextView content;
     private boolean isMore = false, tagIsMore;
@@ -36,6 +43,8 @@ public class AppDetails extends BaseActivity implements View.OnClickListener {
     private LinearLayout appInfoLayout;
     private ImageView appIcon;
     private Toolbar toolbar;
+    private RecyclerView recyclerView;
+    private AppDetailsAdapter adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,6 +62,7 @@ public class AppDetails extends BaseActivity implements View.OnClickListener {
         appInfoLayout = (LinearLayout) findViewById(R.id.app_detail_info_layout);
         appIcon = (ImageView) findViewById(R.id.app_detail_icon);
         toolbar = (Toolbar) findViewById(R.id.app_detail_toolbar);
+        recyclerView = (RecyclerView) findViewById(R.id.app_detail_recycler_view);
 
         contentMore.setOnClickListener(this);
         content.setOnClickListener(this);
@@ -64,13 +74,12 @@ public class AppDetails extends BaseActivity implements View.OnClickListener {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-//        toolbar.setNavigationIcon(getResources().getDrawable(R.mipmap.ic_menu));
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
+        imgList = Arrays.asList(imgUrls);
+        if (adapter == null) {
+            adapter = new AppDetailsAdapter(imgList);
+        }
+        recyclerView.setAdapter(adapter);
 
         //判断简介的行数进行一些操作
         content.post(new Runnable() {
