@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.phone.phonetool.R;
 
 import java.util.List;
@@ -45,7 +44,7 @@ public class AppDetailsAdapter extends RecyclerView.Adapter<AppDetailsAdapter.My
 
     @Override
     public void onBindViewHolder(AppDetailsAdapter.MyHolder holder, int position) {
-        Glide.with(mContext).load(mList.get(position)).into(holder.image);
+//        Glide.with(mContext).load(R.drawable.ic_yi_loading).into(holder.image);
     }
 
     @Override
