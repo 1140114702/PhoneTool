@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.phone.phonetool.R;
 import com.phone.phonetool.fragment.RecommendFragment;
+import com.phone.phonetool.fragment.WelfareFragment;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -53,7 +54,12 @@ public class AppSearch extends AppCompatActivity implements View.OnClickListener
         searchView.setOnClickListener(this);
         Collections.addAll(tabTitles, titles);
         for (int i = 0; i < tabTitles.size(); i++) {
-            fragments.add(new RecommendFragment());
+
+            if (i == tabTitles.size() - 1) {
+                fragments.add(new WelfareFragment());
+            }else {
+                fragments.add(new RecommendFragment());
+            }
         }
         if (adapter == null) {
             adapter = new AppSearchAdapter(getSupportFragmentManager(), tabTitles, fragments);
