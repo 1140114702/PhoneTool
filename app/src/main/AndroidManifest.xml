@@ -24,7 +24,8 @@
         <activity
             android:name=".activity.AppDetails"
             android:theme="@style/AppDetails" />
-        <activity android:name=".activity.AppDetailImgs"></activity>
+        <activity
+            android:name=".activity.AppDetailImgs" android:theme="@style/fullscreen"/>
     </application>
 
 </manifest>

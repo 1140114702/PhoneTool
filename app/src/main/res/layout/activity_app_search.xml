@@ -52,6 +52,7 @@
             </FrameLayout>
 
             <ImageView
+                android:id="@+id/app_search_search"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:padding="7dp"

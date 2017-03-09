@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.phone.phonetool.R;
 import com.phone.phonetool.fragment.RecommendFragment;
@@ -33,6 +34,7 @@ public class AppSearch extends AppCompatActivity implements View.OnClickListener
     private AppSearchAdapter adapter;
     private EditText searchEdit;
     private ImageView clearText;
+    private ImageView searchView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,7 +48,9 @@ public class AppSearch extends AppCompatActivity implements View.OnClickListener
         viewPager = (ViewPager) findViewById(R.id.app_search_view_pager);
         searchEdit = (EditText) findViewById(R.id.app_search_edit);
         clearText = (ImageView) findViewById(R.id.app_search_clear);
+        searchView = (ImageView) findViewById(R.id.app_search_search);
         clearText.setOnClickListener(this);
+        searchView.setOnClickListener(this);
         Collections.addAll(tabTitles, titles);
         for (int i = 0; i < tabTitles.size(); i++) {
             fragments.add(new RecommendFragment());
@@ -63,6 +67,9 @@ public class AppSearch extends AppCompatActivity implements View.OnClickListener
         switch (v.getId()) {
             case R.id.app_search_clear:
                 searchEdit.setText("");
+                break;
+            case R.id.app_search_search:
+                Toast.makeText(this, "搜索", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

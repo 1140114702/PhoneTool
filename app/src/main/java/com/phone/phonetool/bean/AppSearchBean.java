@@ -5,4 +5,14 @@ package com.phone.phonetool.bean;
  */
 
 public class AppSearchBean {
+
+    private String imgUrl;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 }

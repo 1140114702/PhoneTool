@@ -62,4 +62,8 @@
         <item name="android:textSize">0sp</item>
     </style>
 
+    <style name="fullscreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
 </resources>

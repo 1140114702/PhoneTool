@@ -13,6 +13,7 @@ import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.phone.phonetool.R;
 import com.phone.phonetool.adapter.AppSearchAdapter;
 import com.phone.phonetool.bean.AppSearchBean;
+import com.phone.phonetool.util.ImgLoad;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,10 +49,12 @@ public class RecommendFragment extends Fragment {
         List<AppSearchBean> list = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             AppSearchBean bean = new AppSearchBean();
+            bean.setImgUrl("http://file.market.xiaomi.com/thumbnail/PNG/l114/AppStore/0b99955f32bea493d14c0f197197b32b5d2032e14");
             list.add(bean);
         }
         ImageView imageView = new ImageView(getActivity());
-        imageView.setBackgroundResource(R.drawable.ic_yi_loading);
+        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        ImgLoad.loadImg(getActivity(), "http://img23.yidont.com/img/ico/ad/20161028163435.jpg",imageView);
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,500);
         imageView.setLayoutParams(layoutParams);
         recyclerView.addHeaderView(imageView);

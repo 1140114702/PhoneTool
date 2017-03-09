@@ -17,10 +17,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.phone.phonetool.R;
 import com.phone.phonetool.activity.AppDetails;
 import com.phone.phonetool.bean.AppSearchBean;
+import com.phone.phonetool.util.ImgLoad;
 
 import java.util.List;
 
@@ -69,7 +69,7 @@ public class AppSearchAdapter extends RecyclerView.Adapter<AppSearchAdapter.MyHo
 
     @Override
     public void onBindViewHolder(AppSearchAdapter.MyHolder holder, int position) {
-        Glide.with(mContext).load(R.drawable.ic_yi_loading).into(holder.image);
+        ImgLoad.loadImg(mContext, mList.get(position).getImgUrl(), holder.image);
     }
 
     @Override

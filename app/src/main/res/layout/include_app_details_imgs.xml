@@ -1,42 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="267dp"
+    android:layout_height="wrap_content"
     android:background="#F5F6F7"
-    android:padding="8dp"
     android:scrollbars="none">
 
     <LinearLayout
+        android:id="@+id/app_detail_img_layout"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_yi_loading" />
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/ic_yi_loading" />
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_yi_loading" />
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/ic_yi_loading" />
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_yi_loading" />
     </LinearLayout>
 </HorizontalScrollView>

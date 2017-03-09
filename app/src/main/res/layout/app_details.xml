@@ -25,59 +25,7 @@
             app:expandedTitleTextAppearance="@style/tool_bar_layout_0sp"
             app:toolbarId="@+id/toolbar">
 
-            <ImageView
-                android:fitsSystemWindows="true"
-                app:layout_collapseMode="parallax"
-                android:id="@+id/app_detail_app_bg"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:alpha="0.1"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/ic_qq" />
-
-            <LinearLayout
-                android:id="@+id/app_detail_info_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:layout_collapseMode="parallax">
-
-                <ImageView
-                    android:id="@+id/app_detail_icon"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:src="@mipmap/ic_qq" />
-
-                <TextView
-                    style="@style/text_view_14sp_999"
-                    android:layout_marginTop="8dp"
-                    android:text="QQ"
-                    android:textColor="@color/white"
-                    android:textSize="22sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center">
-
-                    <TextView
-                        style="@style/text_view_14sp_999"
-                        android:text="33.3MB"
-                        android:textColor="@color/white" />
-
-                    <TextView
-                        style="@style/text_view_14sp_999"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:text="下载999万次"
-                        android:textColor="@color/white" />
-
-                    <include layout="@layout/include_app_star" />
-                </LinearLayout>
-            </LinearLayout>
+            <include layout="@layout/include_app_details_head"/>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/app_detail_toolbar"
@@ -102,14 +50,7 @@
 
             <include layout="@layout/include_app_details_tag" />
 
-            <android.support.v7.widget.RecyclerView
-                android:background="#F5F6F7"
-                android:scrollbars="none"
-                android:id="@+id/app_detail_recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <!--<include layout="@layout/include_app_details_imgs" />-->
+            <include layout="@layout/include_app_details_imgs" />
 
             <include layout="@layout/include_app_details_content" />
         </LinearLayout>
@@ -126,6 +67,7 @@
         <View style="@style/line_horizontal"/>
 
         <Button
+            android:id="@+id/app_detail_download"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="48dp"

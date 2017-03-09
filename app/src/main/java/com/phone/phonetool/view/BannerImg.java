@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bigkoo.convenientbanner.holder.Holder;
-import com.bumptech.glide.Glide;
+import com.phone.phonetool.util.ImgLoad;
 
 /**
  * banner图片轮播
@@ -19,12 +19,12 @@ public class BannerImg implements Holder<String> {
     @Override
     public View createView(Context context) {
         imageView = new ImageView(context);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         return imageView;
     }
 
     @Override
     public void UpdateUI(Context context, int position, String data) {
-        Glide.with(context).load(data).into(imageView);
+        ImgLoad.loadImg(context, data,imageView);
     }
 }
