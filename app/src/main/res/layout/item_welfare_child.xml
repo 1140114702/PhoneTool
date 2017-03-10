@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <LinearLayout
         android:padding="8dp"
@@ -10,11 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <ImageView
             android:scaleType="fitXY"
-            android:id="@+id/item_welfare_img"
-            android:layout_width="160dp"
+            android:id="@+id/item_welfare_child_img"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
             android:background="@drawable/ic_yi_loading" />
 
@@ -26,6 +25,7 @@
 
             <TextView
                 android:textSize="16sp"
+                android:id="@+id/item_welfare_child_title"
                 style="@style/text_view_14sp_333"
                 android:ellipsize="end"
                 android:maxLines="1"
@@ -37,22 +37,14 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center_vertical">
 
-                <ImageView
-                    android:id="@+id/item_welfare_icon"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_yi_loading" />
-
                 <TextView
                     style="@style/text_view_14sp_999"
-                    android:layout_marginLeft="8dp"
-                    android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="违章查询 823人领取" />
+                    android:text="823人领取" />
+
 
                 <TextView
                     style="@style/text_view_14sp_333"
+                    android:layout_marginLeft="8dp"
                     android:background="@drawable/round_stroke_them"
                     android:gravity="center"
                     android:paddingBottom="1dp"
@@ -64,22 +56,44 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/item_welfare_head_go"
-                style="@style/text_view_14sp_333"
-                android:layout_width="150dp"
-                android:layout_gravity="right"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/round_stroke_them"
-                android:gravity="center"
-                android:paddingBottom="6dp"
-                android:paddingTop="6dp"
-                android:text="马上抢"
-                android:textColor="@color/them" />
+                <ImageView
+                    android:id="@+id/item_welfare_child_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_yi_loading" />
+
+                <TextView
+                    style="@style/text_view_14sp_999"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="违章查询" />
+
+                <TextView
+                    android:id="@+id/item_welfare_child_go"
+                    style="@style/text_view_14sp_333"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_stroke_them"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="马上抢"
+                    android:textColor="@color/them" />
+
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 
-    <View style="@style/line_horizontal"/>
+    <View
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        style="@style/line_horizontal" />
+
 </LinearLayout>
